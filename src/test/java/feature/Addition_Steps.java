@@ -18,7 +18,6 @@ public class Addition_Steps {
 
         @When("I add {int} and {int}")
         public void i_add_and(int num1, int num2) {
-            // This calls the method in your custom Java class
             this.result = calculator.add(num1, num2);
         }
 
