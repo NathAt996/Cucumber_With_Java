@@ -1,4 +1,4 @@
-package feature;
+package steps;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -15,7 +15,8 @@ public class LoginSteps {
 
     @When("I enter a valid username and password")
     public void i_enter_a_valid_username_and_password() {
-        System.out.println("Entering valid credentials");
+        System.out.println("Entering valid credentials and clicking login");
+        isLoggedIn = true;
     }
 
     @When("I click the login button")
@@ -27,6 +28,6 @@ public class LoginSteps {
     @Then("I should be navigated to the home page")
     public void i_should_be_navigated_to_the_home_page() {
         System.out.println("Verifying navigation to the home page");
-        Assert.assertTrue("User should be logged in", isLoggedIn);
+        Assert.assertTrue("I should be navigated to the home page", isLoggedIn);
     }
 }
